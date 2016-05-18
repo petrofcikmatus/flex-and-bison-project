@@ -26,13 +26,13 @@ PROGRAM, PRIKAZY, PRIKAZ
 ### Začiatočný symbol
 PROGRAM
 
-## Inštalácia
+## Inštalácia Flex-u a Bison-u
 
 ```
 sudo dnf install flex bison
 ```
 
-## Kompilácia
+## Kompilácia projektu do programu
 
 Program sa skompiluje spustením príkazu `make` ak sa tam nachádza súbor makefile.
 
@@ -49,8 +49,15 @@ Je potrebné nainštalovať developer súčasti flex-u a bison-u:
 sudo dnf install flex-devel bison-devel
 ```
 
-## Spustenie
+## Spustenie skompilovaného programu
 
 ```
 ./project
+```
+
+## Zmazanie skompilovaných súborov a programu
+
+V súbore makefile je zadefinované čistenie, ktoré sa spúšťa príkazom:
+```
+make clean
 ```
