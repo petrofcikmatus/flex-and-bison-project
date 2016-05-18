@@ -1,38 +1,38 @@
-# Príklad na predmet Jazyky a kompilátory #
+# Príklad na predmet Jazyky a kompilátory
 
-## Zadanie ##
+## Zadanie
 
 **V prostredí Flex/Bison zostrojte ku danej gramatike syntaktický analyzátor.**
 
-### Výstup sémantického spracovania: ###
+### Výstup sémantického spracovania
 1. Veta „Program bol syntakticky spravny.“ alebo „Program nebol syntakticky spravny.“
 1. V prípade syntakticky správneho programu:
 	- Počet príkazov if: X
 	- Maximálna hĺbka vnorenia príkazu p: X
 
-### Gramatika: ###
+### Gramatika
 1. PROGRAM → begin PRIKAZY end .
 1. PRIKAZY → PRIKAZ ; PRIKAZY
 1. PRIKAZY → (prázdny znak)
 1. PRIKAZ  → if v then PRIKAZ
 1. PRIKAZ  → p
 
-### Terminály: ### 
+### Terminály
 begin, end, if, then, p, v, .(bodka), ;(bodkočiarka)
 
-### Neterminály: ### 
+### Neterminály
 PROGRAM, PRIKAZY, PRIKAZ
 
-### Začiatočný symbol: ### 
+### Začiatočný symbol
 PROGRAM
 
-## Inštalácia ##
+## Inštalácia
 
 ```
 sudo dnf install flex bison
 ```
 
-## Kompilácia ##
+## Kompilácia
 
 Program sa skompiluje spustením príkazu `make` ak sa tam nachádza súbor makefile.
 
@@ -49,7 +49,7 @@ Je potrebné nainštalovať developer súčasti flex-u a bison-u:
 sudo dnf install flex-devel bison-devel
 ```
 
-## Spustenie ##
+## Spustenie
 
 ```
 ./project
