@@ -34,7 +34,10 @@ sudo dnf install flex bison
 
 ## Kompilácia projektu do programu
 
-Program sa skompiluje spustením príkazu `make` ak sa tam nachádza súbor makefile.
+Kompiluje sa podľa súboru *makefile* spustením príkazu
+```
+make
+```
 
 Ak by nastala nasledovná chyba:
 ```
@@ -44,7 +47,7 @@ collect2: error: ld returned 1 exit status
 makefile:17: recipe for target 'project' failed
 make: *** [project] Error 1
 ```
-Je potrebné nainštalovať developer súčasti flex-u a bison-u:
+Je potrebné nainštalovať developer súčasti Flex-u a Fison-u:
 ```
 sudo dnf install flex-devel bison-devel
 ```
@@ -57,7 +60,7 @@ sudo dnf install flex-devel bison-devel
 
 ## Zmazanie skompilovaných súborov a programu
 
-V súbore makefile je zadefinované čistenie, ktoré sa spúšťa príkazom:
+V súbore *makefile* je zadefinované čistenie, ktoré sa spúšťa príkazom:
 ```
 make clean
 ```
